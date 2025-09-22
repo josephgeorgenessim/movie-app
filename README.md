@@ -1,21 +1,45 @@
-# 🎬 React Native Movie App
+# 🎬 MovieMax - React Native Movie App
 
-A beautiful and responsive mobile application built with React Native and Expo that allows users to browse, search, and discover movies.
+A beautiful and responsive mobile application built with React Native, Expo, and TypeScript that allows users to browse trending movies, search for films, and view detailed information about their favorite movies.
 
 ## ✨ Features
 
-- Browse popular and trending movies
-- Search for specific movies
-- View detailed movie information
-- Clean and intuitive user interface
-- Built with TypeScript for type safety
-- Uses Expo for easy development and testing
+- 🎥 Browse trending and latest movies
+- 🔍 Search for movies by title
+- 📱 Responsive design for all screen sizes
+- ⚡ Fast and smooth user experience
+- 🔄 Pull-to-refresh functionality
+- 📱 Cross-platform (iOS & Android)
+- 🎨 Modern UI with smooth animations
+- 🔒 Type-safe with TypeScript
+- 🚀 Built with Expo for easy development
+
+## 🛠 Technologies Used
+
+- React Native
+- Expo
+- TypeScript
+- React Navigation
+- React Native Reanimated
+- React Native Masked View
+- Expo Router
+- NativeWind (TailwindCSS for React Native)
+- TMDB API
+- Appwrite (Backend)
+
+## 📱 Screens
+
+- **Home**: Displays trending and latest movies
+- **Search**: Search for movies by title
+- **Movie Details**: View detailed information about a movie
+- **Saved**: Save your favorite movies (coming soon)
+- **Profile**: User profile and settings
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js (v16 or later)
+- Node.js (v18 or later)
 - npm or yarn
 - Expo CLI (`npm install -g expo-cli`)
 - Expo Go app (for testing on physical devices)
@@ -39,6 +63,8 @@ A beautiful and responsive mobile application built with React Native and Expo t
    Create a `.env` file in the root directory and add your TMDB API key:
    ```
    TMDB_API_KEY=your_tmdb_api_key_here
+   APPWRITE_ENDPOINT=your_appwrite_endpoint
+   APPWRITE_PROJECT_ID=your_appwrite_project_id
    ```
 
 4. Start the development server:
@@ -48,6 +74,30 @@ A beautiful and responsive mobile application built with React Native and Expo t
 
 5. Run the app:
    - Press `a` for Android emulator
+   - Press `i` for iOS simulator (macOS only)
+   - Scan the QR code with Expo Go (Android) or Camera app (iOS)
+
+## 🏗 Project Structure
+
+```
+movie-app/
+├── app/                  # App navigation and screens
+│   ├── (tabs)/           # Tab navigation
+│   ├── movies/           # Movie details screen
+│   └── _layout.tsx       # Root layout
+├── assets/               # Images, fonts, and other static files
+├── components/           # Reusable components
+├── constants/            # App constants and configuration
+├── interfaces/           # TypeScript interfaces
+├── services/             # API and data services
+└── types/                # TypeScript type definitions
+```
+
+## 🙏 Acknowledgments
+
+- [TMDB](https://www.themoviedb.org/) for the movie data API
+- [Appwrite](https://appwrite.io/) for backend services
+- [Expo](https://expo.dev/) for the amazing development experience
    - Press `i` for iOS simulator (macOS only)
    - Scan the QR code with your phone's camera (Expo Go app required)
 
@@ -62,23 +112,3 @@ A beautiful and responsive mobile application built with React Native and Expo t
 - Axios for API requests
 - React Query for data fetching and caching
 
-## 📁 Project Structure
-
-```
-movie-app/
-├── app/                 # Main application code
-│   ├── (tabs)/          # Tab navigation
-│   └── movies/          # Movie details screens
-├── assets/              # Images, fonts, and other static files
-├── components/          # Reusable UI components
-├── constants/           # App constants and configurations
-├── interfaces/          # TypeScript type definitions
-├── services/            # API services and hooks
-└── types/               # Global type definitions
-```
-
-## 🙏 Acknowledgments
-
-- [The Movie Database (TMDB)](https://www.themoviedb.org/) for providing the movie data API
-- Expo team for the amazing development experience
-- React Native community for continuous support and improvements
